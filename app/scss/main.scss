@@ -1,0 +1,202 @@
+$playdisplay: "Playfair Display", serif;
+$ubuntu: 'Ubuntu', sans-serif;
+$incon: 'Inconsolata', monospace;
+$text-color: #626262;
+$title-color: #b4ad9e;
+
+@import "node_modules/normalize.css/normalize";
+
+@mixin pre__titles{
+    color: $title-color;
+    text-transform: uppercase;
+}
+body{
+    height: 100%;
+    background-color: #fff;
+    min-width: 320px;
+    line-height: 24px;
+    font-family: $playdisplay;
+    font-size: 14px;
+    font-weight: 400;
+    color: $text-color;
+}
+a{
+    text-decoration: none;
+    color: #626262;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container-header,.container-footer{
+    max-width: 1070px;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.container{
+    max-width: 900px;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header .container-header{
+    justify-content: space-between;
+    padding: 70px 15px;
+}
+.m-menu-link{
+    display: none;
+    font-size: 20px;
+}
+.m-menu{
+    position:fixed;
+    right: 0;
+    top:0;
+    height:100vh;
+    width:100%;
+    display: flex;
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 80px;
+    background-color: #ccc5b5;;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    transform: translateX(100%)
+}
+.m-menu__active{
+    transform: translate(0%)
+}
+.close-menu{
+    position: fixed;
+    right: 15px;
+    top: 39px;
+    font-size: 40px;
+    font-weight: 900;
+    color: $text-color;
+        &:hover{
+            cursor: pointer;
+        }
+}
+.menu{
+    flex-basis: 54.4444%;
+    text-transform: uppercase;
+    ul{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.intro{
+    margin-bottom: 65px;
+    img{
+    width: 100%;
+    height: auto;
+    }
+}
+.top{
+    margin-bottom: 125px;
+}
+.top-info__pre-title,.content__pre-title{
+    @include pre__titles;
+    padding-bottom: 20px;
+}
+.top-info__title,.content__title{
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+.top-info__text{
+    padding-bottom: 35px;
+}
+.top-info__coments a{
+    @include pre__titles;
+}
+.content{
+    margin-bottom: 120px;
+}
+.content__items{
+        img{
+            width: 100%;
+            height: auto;
+            padding-bottom: 20px;
+        }
+        &:first-child{
+            padding-right: 60px;
+        }
+}
+.form{
+    margin-bottom: 100px;
+    background-color: #f0f0f0;
+        .container{
+            justify-content: center;
+            padding-bottom: 75px;
+        }
+}
+.form__title{
+    padding: 70px 0;
+    font-size: 30px;
+    color: #333333;
+}
+.form__input{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+        input{
+            border: none;
+            width: 100%;
+            padding: 10px 5px;
+            outline: none;
+            background-color: transparent;
+        }
+        button{
+            border: none;
+            cursor: pointer;;
+            outline: none;
+            color: $text-color;
+            font-size: 20px;
+            background-color: transparent;
+        }
+}
+.content__button{
+    display: flex;
+    justify-content: center;
+    margin: 150px 0;
+    a{
+        border: 1px solid $text-color;
+        padding: 10px 30px;
+        transition: all .8s;
+            &:hover{
+                background-color: $text-color;
+                color: #fff;
+            }
+    }
+}
+.footer{
+    background-color: #f0f0f0;
+    padding: 40px 0 45px;
+    color: #000;
+}
+.container-footer{
+    justify-content: space-between;
+        a{
+            color: #000;
+        }
+}
+.footer-privacy, .social{
+    display: flex;
+    li{
+        margin: 0 15px 0 0;
+    }
+    ul{
+        display: flex;
+    }
+    a{
+        color: #000;
+    }
+}
+.social{
+    a{
+        color: $text-color;
+    }
+}
